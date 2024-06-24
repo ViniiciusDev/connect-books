@@ -4,10 +4,11 @@ const bookShelf = document.querySelector("#livros");
 function showBooksInTheBookShelf(books) {
     bookShelf.innerHTML = '';
     books.forEach((book) => {
+        let outOfStock = book.quantidade > 0 ? "livro__imagens" : "livro__imagens indisponivel";
         bookShelf.innerHTML += `
             <div class="livro">
                 <img
-                    class="livro__imagens"
+                    class="${outOfStock}"
                     src="${book.imagem}"
                     alt="${book.alt}"
                 />
