@@ -2,6 +2,7 @@ const bookShelf = document.querySelector("#livros");
 
 // Creating the books elements and put them in the bookshelf
 function showBooksInTheBookShelf(books) {
+    bookShelf.innerHTML = '';
     books.forEach((book) => {
         bookShelf.innerHTML += `
             <div class="livro">
